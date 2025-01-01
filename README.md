@@ -23,7 +23,8 @@ ColorInsight is a cutting-edge personal color detection tool designed to identif
 ---
 
 ## Architecture  
-![Architecture Diagram](https://raw.githubusercontent.com/your-username/your-repo/main/docs/images/architecture-diagram.png)
+![Architecture Diagram](https://drive.google.com/uc?id=1e93Kr26sD2sSmGLXhaqjrbpifVl_i2q_)
+
 
 
  
