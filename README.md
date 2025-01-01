@@ -1,29 +1,73 @@
 
+# Match-Style-With-me - Personal Color Detection Model  
+
+[![Demo Video](https://img.shields.io/badge/Watch-Demo-blue)](https://user-images.githubusercontent.com/86555104/226335673-e7cb3db0-7128-4fcb-9c9e-3c397ecd22f1.mp4)
+
+## Overview  
+
+ColorInsight is a cutting-edge personal color detection tool designed to identify the colors that best suit an individual based on their skin tone, hair color, and eye color. By leveraging advanced deep learning techniques, this project aims to provide a reliable and accessible alternative to subjective personal color consultations.
+
+### Motivation  
+1. The unreliability of existing personal color consultations due to subjective assessments and high costs.  
+2. Growing demand for personalized solutions in the beauty industry worldwide.  
+
+---
+
+## Features  
+
+- **Automated Facial Segmentation**: Utilizes **FaRL (Facial Representation Learning)** for precise skin segmentation.  
+- **Accurate Color Prediction**: Predicts one of four personal color types (Spring, Summer, Autumn, Winter) using a fine-tuned **ResNet** model.  
+- **User-Friendly Interface**: Developed with **FastAPI** for seamless interaction.  
+- **Data Management**: Efficient storage and retrieval with **MongoDB**.  
+
+---
+
+## Architecture  
+
+![Architecture Diagram](https://drive.google.com/file/d/1e93Kr26sD2sSmGLXhaqjrbpifVl_i2q_/view?usp=drive_link)  
+
+**Steps**:  
+1. **Image Upload**: Users upload their photos through the web interface.  
+2. **Skin Segmentation**: The **FaRL model** isolates the skin region for analysis.  
+3. **Color Classification**:  
+   - RGB values from the segmented image are processed.  
+   - A **ResNet model** predicts the personal color type.  
+4. **Storage**: MongoDB stores results and user data for future reference.  
+5. **API Integration**: FastAPI ensures smooth communication between frontend and backend.  
+
+---
+
+## Technologies  
+
+- **Deep Learning Models**:  
+  - **FaRL**: Used for face segmentation.  
+  - **ResNet**: Fine-tuned for personal color classification.  
+- **Backend Framework**:  
+  - **FastAPI**: Lightweight and scalable backend framework.  
+- **Database**:  
+  - **MongoDB**: NoSQL database for storing user data and predictions.  
+- **Programming Languages**:  
+  - Python (PyTorch, torchvision, Selenium for data collection).  
+
+---
 
 
-Match Style With Me 🎨✨
-Overview 🌈
-Match Style With Me is your go-to machine learning-powered color analysis buddy! 💁‍♀️ By taking a close look at your unique facial features, this tool helps you find colors that bring out your natural glow! ✨ Think of it as a personal stylist that’s always ready to recommend the best shades for your vibe. 🎨💅
+## Model Details  
 
-Whether you're prepping for a photoshoot 📸, picking out outfits 👗, or just looking to level up your style game, this app has your back!
+1. **Face Segmentation**:  
+   - The **FaRL model** demonstrated high accuracy even in challenging conditions, such as extreme face shapes or varying angles.  
 
-Tech Stack 🛠️
-Color Detection: FaRL model 💥 – We’re talking deep-level analysis of skin tone, hair, and eye color to find your ultimate color match.
-Color Diagnosis: ResNet 🤖 – It’s all about that undertone! Diagnoses color depth, brightness, and assigns you a seasonal palette (Spring, Summer, Autumn, Winter). 🌸☀️🍂❄️
-Lip Color Check: DML-CSR 💋 – Picks the perfect lip shade match for you.
-Backend Power: FastAPI ⚙️ (powered by Python 🐍) for a smooth and fast experience.
-Key Features 🌟
-Color Vibes Detection 🎨: FaRL model dives into your facial details to get a true color read.
-Seasonal Palette Assignment 🌸☀️🍂❄️: With ResNet, the tool assigns your seasonal color palette for those on-point recommendations.
-Totally Tailored Suggestions 👗👖: Based on your unique tones, we recommend the best colors for your natural look.
-Cloud Ready ☁️: Hosted on AWS to keep things running smoothly and ready to scale. 🚀
-My Role 👩‍💻
-I worked on building and optimizing the backend and integrating ML models for this epic experience! 💪 My work involved:
+2. **Color Classification**:  
+   - Initial methods (using L2 norm and RGB-based classification) resulted in low accuracy (20%-30%).  
+   - Transitioned to image-based classification using **ResNet** with Adam optimizer, achieving ~60% accuracy.  
+   - The training dataset consisted of Korean celebrity images collected using Python Selenium.  
+   - Data augmentation was applied to overcome dataset limitations.  
 
-Model Tuning 🎯: Ensured top-notch accuracy by optimizing FaRL and ResNet for your exact skin and color needs.
-Data Flow Master 📊: Designed and managed data flow, ensuring smooth uploads and accurate results.
-Scalable System 🌐: Helped deploy the project on AWS, ensuring it’s reliable, fast, and ready for action. 🔥
-How It Works 🚀
-Upload a Pic 📸: Just snap and upload a clear photo of your face.
-ML Magic ✨: The system analyzes your facial features using FaRL and ResNet models.
-Get Your Colors 🌈: We’ll show you the colors that bring out your natural style, right down to the perfect seasonal palette
+---
+### Prerequisites  
+- Python 3.8 or higher  
+- FastAPI  
+- MongoDB  
+- PyTorch  
+
+
