@@ -1,7 +1,8 @@
 
 # Match-Style-With-me - Personal Color Detection Model  
 
-[![Demo Video](https://img.shields.io/badge/Watch-Demo-blue)](https://user-images.githubusercontent.com/86555104/226335673-e7cb3db0-7128-4fcb-9c9e-3c397ecd22f1.mp4)
+[![Demo Video](https://img.shields.io/badge/Watch-Demo-blue)](https://drive.google.com/file/d/1X_kriDQnA-9bsoMIoQZFPFDYrYdz3dja/preview)
+
 
 ## Overview  
 
