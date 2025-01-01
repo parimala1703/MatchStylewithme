@@ -6,7 +6,7 @@
 
 ## Overview  
 
-ColorInsight is a cutting-edge personal color detection tool designed to identify the colors that best suit an individual based on their skin tone, hair color, and eye color. By leveraging advanced deep learning techniques, this project aims to provide a reliable and accessible alternative to subjective personal color consultations.
+ColorInsight is a cutting-edge personal color detection tool designed to identify the colors that best suit an individual based on their skin tone. By leveraging advanced deep learning techniques, this project aims to provide a reliable and accessible alternative to subjective personal color consultations.
 
 ### Motivation  
 1. The unreliability of existing personal color consultations due to subjective assessments and high costs.  
